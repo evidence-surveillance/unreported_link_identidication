@@ -14,12 +14,28 @@ Necessary pacakges are:
 * numpy==1.19.1
 * scipy==1.3.3
 
-## How to run
+## How to Train
+You need to prepare:
+* A folder contains all the necesssary data. Details are in section Data Description.
+* Have Python enviroment and necessary packages installed
+* The main access file *eval_multi_distance_models_hpc.py*
+
+Example:
+```bash
+nohup python eval_multi_distance_models_hpc.py --data_path ./data/c2p/ \
+                                              --n_neighbours 5  --n_train 1000 \
+                                              --output ./exps/eval_multi_distance_model/ \
+                                              --name eval_c2p_rf_5_1000_single --override \
+                                              > ./logs/eval_c2p_rf_5_1000_single.log 2>&1 &
+```
+
+## How to Inference
 You need to prepare:
 * A folder contains the trained model
 * A foler contains the preprocessed candidate text, vectorizers for the candidate text, and vectorizers for the query text. 
 * A file containing the query text. Each line in the file refers to the contatenated raw text.
 
+Example:
 ```python
 python inference.py --model_path DIR_OF_MODEL --query_file QUERY_FILE --search_path DIR_OF_SEARCH_FILES --output DIR_OF_OUTPUT
 ```
