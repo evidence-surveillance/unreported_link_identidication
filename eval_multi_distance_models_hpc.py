@@ -67,7 +67,6 @@ if __name__ == '__main__':
         models.models = pk.load(open(os.path.join(output, name, 'model.pk'), 'rb'))
         print('model loaded')
     else:
-        train_nns = np.load(os.path.join(data_path, 'neighbours.npz'))['arr_0']
         le = preprocessing.LabelEncoder()
         le.fit(['detach', 'link'])
         train_features = []
