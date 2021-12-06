@@ -62,6 +62,7 @@ python inference.py --model_path DIR_OF_MODEL --query_file QUERY_FILE --search_p
             |-search_bi_tfidf_vectorizer.pk -> the vectorizer to generate bigram token frequency-inverse document frequncy vector for candidate PubMed article text
             |-search_uni_tf_vectorizer.pk -> the vectorizer to generate unigram token frequency vector for candidate PubMed article text
             |-search_uni_tfidf_vectorizer.pk -> the vectorizer to generate unigram token frequency-inverse document frequncy vector for candidate PubMed article text
+            |-search_id2idx.csv -> processed transformation of publishid to index for inference. format: publishid, index
         |-p2c -> the preprocessed dataset fold to rank clinical trial registrations given PubMed articles
             |-query_uni_tf_matrix.npz -> the vectorized PubMed articles. These only contains those on the ground truth list. The vectors are based on the token frequency of unigram tokens.
             |-query_uni_tfidf_matrix.npz -> the vectorized PubMed articles. These only contains those on the ground truth list. The vectors are based on the token frequency-inverse document frequency of unigram tokens.
@@ -81,6 +82,7 @@ python inference.py --model_path DIR_OF_MODEL --query_file QUERY_FILE --search_p
             |-search_bi_tfidf_vectorizer.pk -> the vectorizer to generate bigram token frequency-inverse document frequncy vector for candidate clinical trial registrations text
             |-search_uni_tf_vectorizer.pk -> the vectorizer to generate unigram token frequency vector for candidate clinical trial registrations text
             |-search_uni_tfidf_vectorizer.pk -> the vectorizer to generate unigram token frequency-inverse document frequncy vector for candidate clinical trial registrations text
+            |-search_id2idx.csv -> processed transformation of nctid to index for inference. format: nctid, index
         |-clinic_db.csv -> the extracted clinical trial registrations. format: nctid, concatenated_text, date
         |-clnic_nctid2idx.csv -> processed transformation of nctid to index. format: nctid, index
         |-pubmed_db.csv -> the extracted PubMed articles. format:publishid, nctid (nan if does not exist), concatenated_text, date
