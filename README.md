@@ -41,6 +41,7 @@ python inference.py --model_path DIR_OF_MODEL --query_file QUERY_FILE --search_p
 ```
 
 ## Data Description
+The dataset we use in this paper can be downloaded [here](https://doi.org/10.7910/DVN/MEROWG). We recommend constructing your own datasets in your applications to avoid time-variance and domain shift bias.
 
     |-data
         |-c2p -> the preprocessed dataset fold to rank PubMed articles given clinical trial registrations. c for clnical trial registration, and p for PubMed articles
