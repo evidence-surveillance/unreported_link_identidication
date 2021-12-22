@@ -15,6 +15,8 @@ Necessary pacakges are:
 * scipy==1.3.3
 * spacy==2.3.2
 
+We also share the [conda environment](https://github.com/evidence-surveillance/unreported_link_identidication/blob/main/unreported_link_identidication.yml) we used for this application. For more information of creating environment from our shared file, please visit [miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file).
+
 ## How to Train
 You need to prepare:
 * A folder contains all the necesssary data. Details are in section Data Description.
@@ -32,9 +34,10 @@ nohup python eval_multi_distance_models_hpc.py --data_path ./data/c2p/ \
 
 ## How to Inference
 You need to prepare:
-* A folder contains the trained model
-* A foler contains the preprocessed candidate text, vectorizers for the candidate text, and vectorizers for the query text. 
-* A file containing the query text. Each line in the file refers to the contatenated raw text.
+* DIR_OF_MODEL: A folder contains the trained model
+* DIR_OF_SEARCH_FILES: A foler contains the preprocessed candidate text, vectorizers for the candidate text, and vectorizers for the query text. 
+* QUERY_FILE: A file containing the query text. Each line in the file refers to the contatenated raw text.
+* DIR_OF_OUTPUT: An existing folder to store the results. Each line of the query file would have one json file output in this file with the corresponding line number as file name (line number starts from 0. For example, the first line in the query file has the 0.json file as output and the 10th line in thequry file has the 9.json as the output). Each json file stores a list of scores for each candidate text (the length of the list is equal to the size of candidate text). 
 
 Example:
 ```python
@@ -102,9 +105,11 @@ The dataset we use in this paper can be downloaded [here](https://doi.org/10.791
             |-filters.py -> has filter text by date functions
             |-nlp.py -> has stopwords, tokenization related functions
             |-utils.py -> has flatten array function
-        |-inference.py -> the main file for inference ranking candidates given input text
+    |-inference.py -> the main file for inference ranking candidates given input text. 
         
-    |-eval_multi_distance_models_hpc.py -> the entrance to train and evaluate the model
+    |-eval_multi_distance_models_hpc.py -> the entrance to train and evaluate the model.
+    
+    |-unreported_link_identidication.yml -> the exported conda file for conda enviroment re-construction.
     
 ## Model Description
     
