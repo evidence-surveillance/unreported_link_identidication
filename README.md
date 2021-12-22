@@ -8,11 +8,12 @@ This package includes source codes for training and inference.
 
 ## Packagge Requirements
 
-All the codes are written using Python 3 and the experiments are run on Mac.
+All the codes are written using Python 3.7.7 and the experiments are run on Mac.
 Necessary pacakges are:
-* scikit-learn==0.23.2
 * numpy==1.19.1
+* scikit-learn==0.23.2
 * scipy==1.3.3
+* spacy==2.3.2
 
 ## How to Train
 You need to prepare:
