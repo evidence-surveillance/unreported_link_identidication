@@ -38,7 +38,7 @@ You need to prepare:
 
 Example:
 ```python
-python inference.py --model_path DIR_OF_MODEL --query_file QUERY_FILE --search_path DIR_OF_SEARCH_FILES --output DIR_OF_OUTPUT
+python inference.py --model_path DIR_OF_MODEL --query_path QUERY_FILE --search_path DIR_OF_SEARCH_FILES --output DIR_OF_OUTPUT
 ```
 
 ## Data Description
