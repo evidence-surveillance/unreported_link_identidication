@@ -17,6 +17,9 @@ Necessary pacakges are:
 
 We also share the [conda environment](https://github.com/evidence-surveillance/unreported_link_identidication/blob/main/unreported_link_identidication.yml) we used for this application. For more information of creating environment from our shared file, please visit [miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file).
 
+* unreported_link_identidication.yml: the exported conda file for conda enviroment re-construction on our platform Mac.
+* unreported_link_identidication_all_platform.yml: the exported conda file for conda enviroment re-construction for all platform.
+
 ## How to Train
 You need to prepare:
 * A folder contains all the necesssary data. Details are in section Data Description.
@@ -109,7 +112,8 @@ The dataset we use in this paper can be downloaded [here](https://doi.org/10.791
         
     |-eval_multi_distance_models_hpc.py -> the entrance to train and evaluate the model.
     
-    |-unreported_link_identidication.yml -> the exported conda file for conda enviroment re-construction.
+    |-unreported_link_identidication.yml -> the exported conda file for conda enviroment re-construction on our platform Mac.
+    |-unreported_link_identidication_all_platform.yml -> the exported conda file for conda enviroment re-construction for all platform.
     
 ## Model Description
     
